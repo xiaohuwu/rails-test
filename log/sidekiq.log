@@ -1,0 +1,33 @@
+# Logfile created on 2019-03-26 18:31:20 +0800 by logger.rb/54362
+2019-03-26T10:31:23.381Z 28306 TID-owk3iz9bq INFO: Running in ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin16]
+2019-03-26T10:31:23.381Z 28306 TID-owk3iz9bq INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-03-26T10:31:23.381Z 28306 TID-owk3iz9bq INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-03-26T10:31:23.382Z 28306 TID-owk3iz9bq INFO: Booting Sidekiq 5.2.5 with redis options {:id=>"Sidekiq-server-PID-28306", :url=>nil}
+2019-03-26T10:31:23.389Z 28306 TID-owk3iz9bq INFO: Starting processing, hit Ctrl-C to stop
+2019-03-26T10:33:13.300Z 28306 TID-owk3r20oe HardWorker JID-2d9a18ea3899304ffcce4e41 INFO: start
+2019-03-26T10:33:14.070Z 28306 TID-owk3r20oe HardWorker JID-2d9a18ea3899304ffcce4e41 INFO: done: 0.769 sec
+2019-03-26T10:33:45.926Z 28306 TID-owk3qyrk2 HardWorker JID-3064c4000ac8c54e0dbee21b INFO: start
+2019-03-26T10:33:45.956Z 28306 TID-owk3qyrk2 HardWorker JID-3064c4000ac8c54e0dbee21b INFO: args: [nil, nil]
+2019-03-26T10:33:45.956Z 28306 TID-owk3qyrk2 HardWorker JID-3064c4000ac8c54e0dbee21b INFO: done: 0.03 sec
+2019-03-26T10:33:47.936Z 28306 TID-owk3r20oe HardWorker JID-5a64527fd7f94db1e2725d43 INFO: start
+2019-03-26T10:33:47.937Z 28306 TID-owk3r20oe HardWorker JID-5a64527fd7f94db1e2725d43 INFO: args: [nil, nil]
+2019-03-26T10:33:47.937Z 28306 TID-owk3r20oe HardWorker JID-5a64527fd7f94db1e2725d43 INFO: done: 0.001 sec
+2019-03-26T10:34:15.709Z 28306 TID-owk3qzhni HardWorker JID-33ebc8da5a08f4988d5c2b9f INFO: start
+2019-03-26T10:34:15.710Z 28306 TID-owk3qzhni HardWorker JID-33ebc8da5a08f4988d5c2b9f INFO: args: ["xiaohu", "18"]
+2019-03-26T10:34:15.710Z 28306 TID-owk3qzhni HardWorker JID-33ebc8da5a08f4988d5c2b9f INFO: done: 0.001 sec
+2019-03-26T10:39:01.919Z 28537 TID-ox73otc19 INFO: Running in ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin16]
+2019-03-26T10:39:01.920Z 28537 TID-ox73otc19 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-03-26T10:39:01.920Z 28537 TID-ox73otc19 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-03-26T10:39:01.920Z 28537 TID-ox73otc19 INFO: Booting Sidekiq 5.2.5 with redis options {:id=>"Sidekiq-server-PID-28537", :url=>nil}
+2019-03-26T10:39:01.923Z 28537 TID-ox73otc19 INFO: Starting processing, hit Ctrl-C to stop
+2019-03-26T10:39:52.669Z 28579 TID-owb5bkrev INFO: Running in ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin16]
+2019-03-26T10:39:52.669Z 28579 TID-owb5bkrev INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2019-03-26T10:39:52.669Z 28579 TID-owb5bkrev INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org
+2019-03-26T10:39:52.669Z 28579 TID-owb5bkrev INFO: Booting Sidekiq 5.2.5 with redis options {:id=>"Sidekiq-server-PID-28579", :url=>nil}
+2019-03-26T10:39:52.674Z 28579 TID-owb5bkrev INFO: Starting processing, hit Ctrl-C to stop
+2019-03-26T10:41:13.398Z 28579 TID-owb5x2bkv HardWorker JID-b9febd248dba118d2e04a1d4 INFO: start
+2019-03-26T10:41:13.473Z 28579 TID-owb5x2bkv HardWorker JID-b9febd248dba118d2e04a1d4 INFO: args: ["xiaohu", "18"]
+2019-03-26T10:41:13.474Z 28579 TID-owb5x2bkv HardWorker JID-b9febd248dba118d2e04a1d4 INFO: done: 0.076 sec
+2019-03-26T10:41:23.884Z 28579 TID-owb5x0muv HardWorker JID-0e8493afabe4833c8c6fbf42 INFO: start
+2019-03-26T10:41:23.885Z 28579 TID-owb5x0muv HardWorker JID-0e8493afabe4833c8c6fbf42 INFO: args: ["xiaohu", "18"]
+2019-03-26T10:41:23.885Z 28579 TID-owb5x0muv HardWorker JID-0e8493afabe4833c8c6fbf42 INFO: done: 0.001 sec

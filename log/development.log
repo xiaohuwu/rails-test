@@ -1,0 +1,1235 @@
+Started GET "/" for 127.0.0.1 at 2019-03-08 16:47:02 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (31.6ms)
+Completed 200 OK in 76ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2019-03-08 17:06:52 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1851ms (Views: 1847.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-08 17:08:16 +0800
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-03-08 17:10:22 +0800
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-03-08 17:13:57 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 401ms (Views: 382.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-08 17:14:24 +0800
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/welcome/index?numbers[]=1&numbers[]=2&numbers[]=3" for 127.0.0.1 at 2019-03-08 17:28:48 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"numbers"=>["1", "2", "3"]}
+[param]["1", "2", "3"]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 417ms (Views: 395.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?user[id]=1&user[name]=Nathan" for 127.0.0.1 at 2019-03-08 17:32:10 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"user"=>{"id"=>"1", "name"=>"Nathan"}}
+[param]
+[param]{"id"=>"1", "name"=>"Nathan"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 256ms (Views: 231.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?users[][id]=1&users[][name]=Nathan&users[][id]=2&users[][name]=Emma" for 127.0.0.1 at 2019-03-08 17:34:10 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"users"=>[{"id"=>"1", "name"=>"Nathan"}, {"id"=>"2", "name"=>"Emma"}]}
+[param]
+[param]
+[param][<ActionController::Parameters {"id"=>"1", "name"=>"Nathan"} permitted: false>, <ActionController::Parameters {"id"=>"2", "name"=>"Emma"} permitted: false>]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 173ms (Views: 154.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?users[][id]=1&users[][name]=Nathan&users[][id]=2&users[][name]=Emma" for 127.0.0.1 at 2019-03-08 17:34:43 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"users"=>[{"id"=>"1", "name"=>"Nathan"}, {"id"=>"2", "name"=>"Emma"}]}
+[param]
+[param]
+[param]{"id"=>"1", "name"=>"Nathan"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//welcome/new" for 127.0.0.1 at 2019-03-08 17:41:09 +0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for WelcomeController):
+  
+actionpack (5.2.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:41:15 +0800
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for WelcomeController):
+  
+actionpack (5.2.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:43:28 +0800
+Processing by WelcomeController#new as HTML
+  Rendering welcome/new.html.erb within layouts/application
+  Rendered welcome/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 187ms (Views: 178.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:44:00 +0800
+Processing by WelcomeController#new as HTML
+  Rendering welcome/new.html.erb within layouts/application
+  Rendered welcome/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 125ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:44:32 +0800
+Processing by WelcomeController#new as HTML
+  Rendering welcome/new.html.erb within layouts/application
+  Rendered welcome/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:45:12 +0800
+Processing by WelcomeController#new as HTML
+  Rendering welcome/new.html.erb within layouts/application
+  Rendered welcome/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2019-03-08 17:45:17 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/clients"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:52:05 +0800
+Processing by WelcomeController#new as HTML
+  Rendering welcome/new.html.erb within layouts/application
+  Rendered welcome/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 185ms (Views: 180.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2019-03-08 17:52:07 +0800
+Processing by WelcomeController#create as HTML
+  Parameters: {"client"=>{"name"=>"Acme", "phone"=>"12345", "address"=>{"postcode"=>"12345", "city"=>"Carrot City"}}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/welcome/new" for 127.0.0.1 at 2019-03-08 17:53:47 +0800
+Processing by WelcomeController#new as HTML
+  Rendering welcome/new.html.erb within layouts/application
+  Rendered welcome/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2019-03-08 17:53:48 +0800
+Processing by WelcomeController#create as HTML
+  Parameters: {"client"=>{"name"=>"Acme", "phone"=>"12345", "address"=>{"postcode"=>"12345", "city"=>"Carrot City"}}}
+[param]{"client"=>{"name"=>"Acme", "phone"=>"12345", "address"=>{"postcode"=>"12345", "city"=>"Carrot City"}}, "controller"=>"welcome", "action"=>"create"}
+No template found for WelcomeController#create, rendering head :no_content
+Completed 204 No Content in 114ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (102.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (266.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3807792367028881875', 0)[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+Migrating to CreateUsers (20190311115349)
+  [1m[35m (196.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `desc` varchar(255), `pic` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190311115349_create_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190311115349')[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-03-11 11:54:30', '2019-03-11 11:54:30')[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3807792367028881875')[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-03-11 20:08:20 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 75ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2019-03-11 20:08:36 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:09:21 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 498ms (Views: 474.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2019-03-11 20:09:31 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/user"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2019-03-11 20:10:04 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/user"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:10:12 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 150ms (Views: 135.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:10:28 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007ffcc79d3430 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-56542-1k67419.jpg>, @original_filename="banner_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:10:53 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007ffcc833c5f8 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-56542-wwdi0n.jpg>, @original_filename="banner_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES ('Acme', '2019-03-11 12:10:53', '2019-03-11 12:10:53')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (53.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 74.0ms)
+
+
+  
+NoMethodError (undefined method `avatar' for #<User:0x007ffcc7db8258>):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:12:27 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 167ms (Views: 165.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:12:34 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007ffcc9091528 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-56542-a72qt4.jpg>, @original_filename="banner_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES ('Acme', '2019-03-11 12:12:34', '2019-03-11 12:12:34')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+[u.avatar.url]
+[u.avatar.url]
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 4.5ms)
+
+
+  
+NoMethodError (undefined method `avatar_identifier' for #<AvatarUploader:0x007ffcc8589b30>):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:15:28 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 145ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:15:34 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007ffcc870ae78 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-56542-1ygemq3.jpg>, @original_filename="banner_02.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_02.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES ('Acme', '2019-03-11 12:15:34', '2019-03-11 12:15:34')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+[u.avatar.url]
+[u.avatar.url]
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 134ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:22:44 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 416ms (Views: 404.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:22:46 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:22:52 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8e73a8e540 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-57144-1pwkca2.jpg>, @original_filename="banner_02.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_02.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `created_at`, `updated_at`) VALUES ('Acme', '2019-03-11 12:22:53', '2019-03-11 12:22:53')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+[u.avatar.url]
+[u.avatar.url]
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 152ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:24:14 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 627ms (Views: 618.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:24:21 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007fd1ef3a77a8 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-57197-1apamxm.jpg>, @original_filename="banner_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `pic`, `created_at`, `updated_at`) VALUES ('Acme', 'banner_01.jpg', '2019-03-11 12:24:21', '2019-03-11 12:24:21')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+[u.avatar.url]/uploads/cache/banner_01.jpg
+[u.avatar.url]/Users/admin/RubymineProjects/rails-camp/blog/public/uploads/cache/banner_01.jpg
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 160ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:25:21 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:25:27 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007fd1efeda3f0 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-57197-dx2efs.jpg>, @original_filename="banner_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `pic`, `created_at`, `updated_at`) VALUES ('Acme', 'banner_01.jpg', '2019-03-11 12:25:27', '2019-03-11 12:25:27')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+[u.avatar.url]/uploads/cache/banner_01.jpg
+[u.avatar.url]/Users/admin/RubymineProjects/rails-camp/blog/public/uploads/cache/banner_01.jpg
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 144ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-11 20:26:42 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 1616ms (Views: 1606.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-11 20:26:52 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Acme", "phone"=>"12345"}, "file"=>#<ActionDispatch::Http::UploadedFile:0x007fb22e9c3e10 @tempfile=#<Tempfile:/var/folders/r_/vpvd_j_14bdfy6yg81ypz60h0000gn/T/RackMultipart20190311-57374-3y7b2y.jpg>, @original_filename="banner_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"banner_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `pic`, `created_at`, `updated_at`) VALUES ('Acme', 'banner_01.jpg', '2019-03-11 12:26:52', '2019-03-11 12:26:52')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+[u.avatar.url]/uploads/cache/banner_01.jpg
+[u.avatar.url]/Users/admin/RubymineProjects/rails-camp/blog/public/uploads/cache/banner_01.jpg
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 215ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-26 18:16:46 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/.rvm/gems/ruby-2.3.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/.rvm/gems/ruby-2.3.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 52ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2019-03-26 18:17:23 +0800
+Processing by WelcomeController#index as HTML
+[param]
+[param]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/welcome_controller.rb:10:in `index'
+Started GET "/welcome?users[][id]=1&users[][name]=Nathan&users[][id]=2&users[][name]=Emma" for 127.0.0.1 at 2019-03-26 18:17:51 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"users"=>[{"id"=>"1", "name"=>"Nathan"}, {"id"=>"2", "name"=>"Emma"}]}
+[param]
+[param]
+[param]{"id"=>"1", "name"=>"Nathan"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 577ms (Views: 474.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome?name=xiaohu&age=25" for 127.0.0.1 at 2019-03-26 18:21:47 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"name"=>"xiaohu", "age"=>"25"}
+[param]
+[param]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/welcome_controller.rb:10:in `index'
+Started GET "/wellcome" for 127.0.0.1 at 2019-03-26 18:32:52 +0800
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/wellcome"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/welcome" for 127.0.0.1 at 2019-03-26 18:33:13 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 281ms (Views: 238.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2019-03-26 18:33:45 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 221ms (Views: 156.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2019-03-26 18:33:47 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome?name=xiaohu&age=18" for 127.0.0.1 at 2019-03-26 18:34:15 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"name"=>"xiaohu", "age"=>"18"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome?name=xiaohu&age=18" for 127.0.0.1 at 2019-03-26 18:41:13 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Parameters: {"name"=>"xiaohu", "age"=>"18"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 505ms (Views: 428.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome?name=xiaohu&age=18" for 127.0.0.1 at 2019-03-26 18:41:23 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"name"=>"xiaohu", "age"=>"18"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3807792367028881875', 0)[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+Migrating to CreatePosts (20190327071252)
+  [1m[35m (116.9ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `text` text, `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_posts_on_user_id`  (`user_id`))[0m
+  ↳ db/migrate/20190327071252_create_posts.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190327071252')[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+Migrating to CreateComments (20190327071429)
+  [1m[35m (312.2ms)[0m  [1m[35mCREATE TABLE `comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `author` varchar(255), `content` text, `post_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_comments_on_post_id`  (`post_id`))[0m
+  ↳ db/migrate/20190327071429_create_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190327071429')[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (8.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('3807792367028881875')[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2019-03-27 15:57:31 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (460.7ms)
+Completed 500 Internal Server Error in 807ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<#<Class:0x007fe558d7a0d8>:0x007fe558f42d70>
+Did you mean?  new_user_path):
+    38: </table>
+    39: 
+    40: <%= link_to t('.new', :default => t("helpers.links.new")),
+    41:             new_post_path,
+    42:             :class => 'btn btn-primary' %>
+  
+app/views/posts/index.html.erb:41:in `_app_views_posts_index_html_erb__1290885916801037506_70311507384680'
+Started GET "/" for 127.0.0.1 at 2019-03-27 15:59:49 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (27.4ms)
+Completed 500 Internal Server Error in 1128ms (ActiveRecord: 22.4ms)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__3982530617125162190_70311491814480'
+Started GET "/" for 127.0.0.1 at 2019-03-27 16:01:22 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 149ms (Views: 99.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-27 17:00:53 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/config
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/images
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/javascripts
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/twitter-bootstrap-rails-4.0.0/app/assets/fonts
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/twitter-bootstrap-rails-4.0.0/app/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/twitter-bootstrap-rails-4.0.0/app/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/twitter-bootstrap-rails-4.0.0/vendor/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/admin/.rvm/gems/ruby-2.3.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/admin/RubymineProjects/rails-camp/blog/node_modules):
+     6:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9:     <%= stylesheet_link_tag "application", :media => "all" %>
+    10:     <%= javascript_include_tag "application" %>
+    11: 
+    12:     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3982530617125162190_70311546162360'
+Started GET "/" for ::1 at 2019-03-27 17:07:46 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (57.2ms)
+Completed 500 Internal Server Error in 1522ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `bootstrap_flash' for #<#<Class:0x007f9c54ce75c8>:0x007f9c54cdef18>):
+    37:     <div class="container">
+    38:       <div class="row">
+    39:         <div class="col-lg-9">
+    40:           <%= bootstrap_flash %>
+    41:           <%= yield %>
+    42:         </div>
+    43:         <div class="col-lg-3">
+  
+app/views/layouts/application.html.erb:40:in `_app_views_layouts_application_html_erb__2534248369461102990_70154730552900'
+Started GET "/" for ::1 at 2019-03-27 17:08:23 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-03-27 17:10:16 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.4ms)
+  Rendered posts/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
+    2: 
+    3:   <% if @post.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__2543198473998726972_70154714960180'
+app/views/posts/new.html.erb:5:in `_app_views_posts_new_html_erb__2278953796487436018_70154748613220'
+Started GET "/posts/new" for ::1 at 2019-03-27 17:11:05 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.0ms)
+  Rendered posts/new.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
+    2: 
+    3:   <% if @post.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__2543198473998726972_70154759232620'
+app/views/posts/new.html.erb:5:in `_app_views_posts_new_html_erb__2278953796487436018_70154692923680'
+Started GET "/posts/new" for ::1 at 2019-03-27 17:11:37 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (184.5ms)
+  Rendered posts/new.html.erb within layouts/application (187.5ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 46.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_span' for #<ActionView::Helpers::FormBuilder:0x007f9c5c0320c8>):
+    20:     <div class="col-lg-10">
+    21:       <%= f.text_field :title, :class => 'form-control' %>
+    22:     </div>
+    23:     <%=f.error_span(:title) %>
+    24:   </div>
+    25:   <div class="form-group">
+    26:     <%= f.label :text, :class => 'control-label col-lg-2' %>
+  
+app/views/posts/_form.html.erb:23:in `block in _app_views_posts__form_html_erb__2543198473998726972_70154694110200'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__2543198473998726972_70154694110200'
+app/views/posts/new.html.erb:5:in `_app_views_posts_new_html_erb__2278953796487436018_70154767635280'
+Started GET "/posts/new" for ::1 at 2019-03-27 17:13:42 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.0ms)
+  Rendered posts/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 89ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-27 14:48:20 +0800
+  
+Mysql2::Error::ConnectionError (Can't connect to MySQL server on '127.0.0.1' (60)):
+  
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.2) lib/mysql2/client.rb:90:in `initialize'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-27 14:51:22 +0800
+  [1m[35m (11.5ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (26.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (36.7ms)
+Completed 500 Internal Server Error in 667ms (ActiveRecord: 27.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery.turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/config
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/images
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/javascripts
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/admin/RubymineProjects/rails-camp/blog/node_modules
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/images):
+     6:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9:     <%= stylesheet_link_tag "application", :media => "all" %>
+    10:     <%= javascript_include_tag "application" %>
+    11: 
+    12:     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3181029563075579116_70143940990000'
+Started GET "/" for ::1 at 2019-05-27 14:51:24 +0800
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_unicode_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (35.4ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 25.5ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery.turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/config
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/images
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/javascripts
+  /Users/admin/RubymineProjects/rails-camp/blog/app/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/admin/RubymineProjects/rails-camp/blog/node_modules
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/fonts
+  /Users/admin/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.4.1/assets/images):
+     6:     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     7:     <title><%= content_for?(:title) ? yield(:title) : "Blog" %></title>
+     8:     <%= csrf_meta_tags %>
+     9:     <%= stylesheet_link_tag "application", :media => "all" %>
+    10:     <%= javascript_include_tag "application" %>
+    11: 
+    12:     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3181029563075579116_70143915618580'
+Started GET "/" for ::1 at 2019-05-27 14:54:36 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 484ms (Views: 465.2ms | ActiveRecord: 0.4ms)
+
+

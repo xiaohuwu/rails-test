@@ -1,0 +1,13 @@
+
+<style>
+  form{
+    padding-left: 20px;
+  }
+  </style>
+<form accept-charset="UTF-8" action="/welcome" method="post" >
+  <input type="text" name="client[name]" value="Acme" /> <br/>
+  <input type="text" name="client[phone]" value="12345" /> <br/>
+  <input type="text" name="client[address][postcode]" value="12345" /> <br/>
+  <input type="text" name="client[address][city]" value="Carrot City" />
+  <button type="submit"> 提交</button>
+</form>
