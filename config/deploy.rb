@@ -12,8 +12,10 @@ require 'mina/git'
 
 set :domain, '47.106.115.20'
 set :deploy_to, '/var/www/foobar.com'
-set :repository, 'git://...'
+set :repository, 'https://github.com/xiaohuwu/rails-test.git'
 set :branch, 'master'
+set :user, 'root'
+set :port, '3118'
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
