@@ -3,3 +3,4 @@ I, [2019-05-28T11:04:32.541070 #23293]  INFO -- : listening on addr=0.0.0.0:8080
 I, [2019-05-28T11:04:34.725990 #23293]  INFO -- : master process ready
 I, [2019-05-28T11:04:34.730969 #23316]  INFO -- : worker=0 ready
 I, [2019-05-28T11:04:34.732687 #23317]  INFO -- : worker=1 ready
+D, [2019-05-28T12:39:41.376719 #23293] DEBUG -- : waiting 31.0s after suspend/hibernation
