@@ -10,9 +10,6 @@ module Blog
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-
-    config.i18n.default_locale = 'zh-CN'
-    config.load_defaults 5.1
     config.action_cable.disable_request_forgery_protection = true
     config.time_zone = 'Beijing'
     config.active_record.default_timezone = :local
