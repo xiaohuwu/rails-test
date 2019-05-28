@@ -19,7 +19,6 @@ set :repository, 'https://github.com/xiaohuwu/rails-test.git'
 set :branch, 'master'
 set :user, 'root'
 set :port, '3118'
-
 set :stage, 'production'
 
 # For system-wide RVM install.

@@ -13,9 +13,11 @@ worker_processes 2
 working_directory APP_HOME # available in 0.94.0+
 
 if 'production' == ENV['RAILS_ENV']
+=begin
   listen "/var/www/foobar.com/tmp/sockets/unicorn.sock", :backlog => 64
   pid "/var/www/foobar.com/tmp/pids/unicorn.pid"
 else
+=end
   listen 3006, :tcp_nopush => true
   pid "#{APP_HOME}/tmp/pids/unicorn.pid"
 end

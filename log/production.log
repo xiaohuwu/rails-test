@@ -1,0 +1,86 @@
+I, [2019-05-28T13:10:12.257267 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:10:12 +0800
+I, [2019-05-28T13:10:12.267292 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:10:12.304735 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:10:12.391796 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (86.8ms)
+I, [2019-05-28T13:10:23.115327 #25417]  INFO -- : Completed 200 OK in 10848ms (Views: 10815.2ms | ActiveRecord: 31.7ms)
+I, [2019-05-28T13:10:23.196947 #25417]  INFO -- : Started GET "/assets/application-2c1e58748160d85d26cbad833a9aec35a5e1089b67d18ee177ca32c9bfd56a6c.css" for 127.0.0.1 at 2019-05-28 13:10:23 +0800
+I, [2019-05-28T13:10:23.237863 #25416]  INFO -- : Started GET "/assets/application-7f3c76120a78eeac9e2fec6f29f77f33637abab808bc7508abbef6fb5e40c8bd.js" for 127.0.0.1 at 2019-05-28 13:10:23 +0800
+I, [2019-05-28T13:10:25.506209 #25417]  INFO -- : Started GET "/favicon.ico" for 127.0.0.1 at 2019-05-28 13:10:25 +0800
+F, [2019-05-28T13:10:25.507356 #25417] FATAL -- :   
+F, [2019-05-28T13:10:25.507665 #25417] FATAL -- : ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+F, [2019-05-28T13:10:25.507817 #25417] FATAL -- :   
+F, [2019-05-28T13:10:25.508012 #25417] FATAL -- : actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+unicorn (5.5.1) lib/unicorn/http_server.rb:605:in `process_client'
+unicorn (5.5.1) lib/unicorn/http_server.rb:700:in `worker_loop'
+unicorn (5.5.1) lib/unicorn/http_server.rb:548:in `spawn_missing_workers'
+unicorn (5.5.1) lib/unicorn/http_server.rb:144:in `start'
+unicorn (5.5.1) bin/unicorn_rails:209:in `<top (required)>'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/unicorn_rails:23:in `load'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/unicorn_rails:23:in `<main>'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:24:in `<main>'
+I, [2019-05-28T13:10:33.219151 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:10:33 +0800
+I, [2019-05-28T13:10:33.220099 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:10:33.221658 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:10:33.224639 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (2.8ms)
+I, [2019-05-28T13:10:33.228309 #25417]  INFO -- : Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+I, [2019-05-28T13:11:06.247417 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:06 +0800
+I, [2019-05-28T13:11:06.259847 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:06.261534 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:06.264087 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (2.2ms)
+I, [2019-05-28T13:11:06.265672 #25417]  INFO -- : Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+I, [2019-05-28T13:11:06.900342 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:06 +0800
+I, [2019-05-28T13:11:06.901104 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:06.902202 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:06.905986 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (3.6ms)
+I, [2019-05-28T13:11:06.907254 #25417]  INFO -- : Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+I, [2019-05-28T13:11:07.317349 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:07 +0800
+I, [2019-05-28T13:11:07.318115 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:07.319082 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:07.322522 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (3.2ms)
+I, [2019-05-28T13:11:07.324685 #25417]  INFO -- : Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+I, [2019-05-28T13:11:07.669282 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:07 +0800
+I, [2019-05-28T13:11:07.670279 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:07.671698 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:07.675644 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (3.6ms)
+I, [2019-05-28T13:11:07.678151 #25417]  INFO -- : Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+I, [2019-05-28T13:11:08.065597 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:08 +0800
+I, [2019-05-28T13:11:08.066584 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:08.067639 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:08.070199 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (2.3ms)
+I, [2019-05-28T13:11:08.071941 #25417]  INFO -- : Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+I, [2019-05-28T13:11:08.430856 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:08 +0800
+I, [2019-05-28T13:11:08.431763 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:08.432890 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:08.436384 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (3.2ms)
+I, [2019-05-28T13:11:08.438159 #25417]  INFO -- : Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+I, [2019-05-28T13:11:08.776153 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:08 +0800
+I, [2019-05-28T13:11:08.777425 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:08.780279 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:08.784126 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (3.5ms)
+I, [2019-05-28T13:11:08.786548 #25417]  INFO -- : Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+I, [2019-05-28T13:11:09.183439 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:09 +0800
+I, [2019-05-28T13:11:09.184435 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:09.185658 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:09.188590 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (2.7ms)
+I, [2019-05-28T13:11:09.190174 #25417]  INFO -- : Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+I, [2019-05-28T13:11:09.559529 #25417]  INFO -- : Started GET "/" for 127.0.0.1 at 2019-05-28 13:11:09 +0800
+I, [2019-05-28T13:11:09.560981 #25417]  INFO -- : Processing by PostsController#index as HTML
+I, [2019-05-28T13:11:09.563159 #25417]  INFO -- :   Rendering posts/index.html.erb within layouts/application
+I, [2019-05-28T13:11:09.565974 #25417]  INFO -- :   Rendered posts/index.html.erb within layouts/application (2.6ms)
+I, [2019-05-28T13:11:09.567735 #25417]  INFO -- : Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms)

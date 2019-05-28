@@ -26,5 +26,5 @@ production:
   reconnect: true
   database: blog_new
   pool: 5
-  username:
+  username: root
   password: "123456"

@@ -4,3 +4,33 @@ I, [2019-05-28T11:04:34.725990 #23293]  INFO -- : master process ready
 I, [2019-05-28T11:04:34.730969 #23316]  INFO -- : worker=0 ready
 I, [2019-05-28T11:04:34.732687 #23317]  INFO -- : worker=1 ready
 D, [2019-05-28T12:39:41.376719 #23293] DEBUG -- : waiting 31.0s after suspend/hibernation
+I, [2019-05-28T13:08:00.749159 #25359]  INFO -- : Refreshing Gem list
+I, [2019-05-28T13:08:20.692391 #25359]  INFO -- : listening on addr=0.0.0.0:3006 fd=11
+E, [2019-05-28T13:08:20.750791 #25359] ERROR -- : Access denied for user 'ly'@'localhost' (using password: YES) (Mysql2::Error::ConnectionError)
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `connect'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/mysql2-0.5.2/lib/mysql2/client.rb:90:in `initialize'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `new'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/mysql2_adapter.rb:22:in `mysql2_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:1010:in `retrieve_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/connection_handling.rb:90:in `connection'
+config/unicorn.rb:40:in `block in reload'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/unicorn-5.5.1/lib/unicorn/http_server.rb:542:in `spawn_missing_workers'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/unicorn-5.5.1/lib/unicorn/http_server.rb:144:in `start'
+/Users/admin/.rvm/gems/ruby-2.3.3/gems/unicorn-5.5.1/bin/unicorn_rails:209:in `<top (required)>'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/unicorn_rails:23:in `load'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/unicorn_rails:23:in `<main>'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/admin/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:24:in `<main>'
+I, [2019-05-28T13:09:47.103835 #25414]  INFO -- : Refreshing Gem list
+I, [2019-05-28T13:09:48.224046 #25414]  INFO -- : listening on addr=0.0.0.0:3006 fd=11
+I, [2019-05-28T13:09:48.250190 #25414]  INFO -- : master process ready
+I, [2019-05-28T13:09:48.253928 #25416]  INFO -- : worker=0 ready
+I, [2019-05-28T13:09:48.256204 #25417]  INFO -- : worker=1 ready
+D, [2019-05-28T13:29:36.803426 #25414] DEBUG -- : waiting 31.0s after suspend/hibernation
