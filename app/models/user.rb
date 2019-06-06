@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-  mount_uploader :pic, AvatarUploader
-  validates :name, presence: true, length: {minimum: 2, maximum: 20}, uniqueness: true
-  validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: {minimum: 6, maximum: 16}
-  has_many :posts
+  authenticates_with_sorcery!
 
-  has_secure_password
+
+  validates :password, length: { minimum: 3 }, if: -> { new_record? }
+  validates :password, confirmation: true, if: -> { new_record? }
+  validates :email, uniqueness: true
+
 
 end

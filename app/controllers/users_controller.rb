@@ -1,16 +1,23 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  before_action :auth_user
+
   def create
-    user = User.new
-    user.name = params[:user][:name]
-    user.pic = params[:file]
-    user.save
-    logger.info "[u.avatar.url]#{user.pic.url}"
-    logger.info "[u.avatar.url]#{user.pic.current_path}"
-    #u.avatar.current_path
+    @user = User.create(params[:user].permit!)
+
+    if @user.errors.any?
+      flash.now[:notice] = @user.errors.values.to_sentence
+      render :new
+    else
+      redirect_to action: :index
+    end
   end
 
   def new
-
+    @user = User.new
   end
+
+  def index
+    @users = User.all
+  end
+
 end
